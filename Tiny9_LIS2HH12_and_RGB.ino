@@ -19,7 +19,7 @@ void setup() {
   pinMode(greenledPin, OUTPUT);
   //lis.scale(gravity);
   Serial.begin(9600);                 // Start the serial terminal
-  Serial.println("Tiny9 LIS2HH12 earthquake Hook Up Guide Example");
+  Serial.println("Tiny9 LIS2HH12 RGB LED Hook Up Guide Example");
   Serial.println();
   digitalWrite(redledPin, LOW);
   delay(1000);
@@ -40,12 +40,12 @@ void loop() {
         digitalWrite(greenledPin, HIGH);
         digitalWrite(blueledPin, HIGH);
     }
- else if(y1 < 0.9){//minor earthquake over 3.0
+ else if(y1 < 0.9){
         digitalWrite(blueledPin, LOW);
         digitalWrite(greenledPin, HIGH);
         digitalWrite(redledPin, HIGH);              
     }  
- else if(z1 < -0.9){//minor earthquake over 3.0
+ else if(z1 < -0.9){
         digitalWrite(greenledPin, LOW);
         digitalWrite(redledPin, HIGH);
         digitalWrite(blueledPin, HIGH);            
